@@ -1,71 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
     <title>Document</title>
-</head>
-<body>
-    <!-- <div class="w-50 container my-2">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>price</th>
-                    <th>catogry</th>
-                    <th>desc</th>
-                    <th>update</th>
-                    <th>delet</th>
-                </tr>
-            </thead>
-            <tbody id="tbody"></tbody>
-
-        </table>
-    </div>  --> -->
-    <div class="w-75 rounded bg-info mx-auto p-3">
-        <h1 class="text-center"> Crud-System</h1>
-        <div>
-            <label for="productNameInput">Product Name:</label>
-             <input type="text" id="productNameInput" class="form-control p-2 " oninput="vailditionName()">
-             <p  id="NameInput" class="alert alert-danger d-none ">invaild Name [input must stsart with caital char them from 3 to 9 small char]</p>
-        </div>
-        <div>
-            <label for="productPriceInput">Product Price:</label>
-             <input type="number" id="productPriceInput" class="form-control p-2" oninput="vailditionPrice()">
-             <p  id="PriceInput" class="alert alert-danger d-none ">invaild Price [price must be from 1 to 5 gigit]</p>
-        </div>
-        <div>
-            <label for="productCatergryInput">Product categry:</label>
-             <input type="text" id="productCatergryInput" class="form-control p-2" oninput="vailditioncategry()">
-             <p  id="categryInput" class="alert alert-danger d-none ">invaild categry </p>
-        </div>
-        <div>
-            <label for="productDescriptionInput">Product Description:</label>
-             <textarea  id="productDescriptionInput" class="form-control p-2" oninput="vailditiondesc()"></textarea>
-             <p  id="descInput" class="alert alert-danger d-none ">invaild desc</p>
-        </div>
-        <button onclick="addProduct()" class="btn btn-primary w-100 mt-3" id="addproduct">add product</button>
-        <button onclick="updatfun()" class="btn btn-primary w-100 mt-3 d-none" id="updateproduct">update product</button>
-       <input class="form-control my-2" id="serechItems" placeholder="search here..." typy="text" oninput="serechProduct()">
-        <table class="table my-3 text-center">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Categry</th>
-                    <th>Description</th>
-                    <th>Update</th>
-                    <th>delet</th>
-                </tr>
-            </thead>
-            <tbody id="tablebody">
-            </tbody>
-        </table>
+  </head>
+  <body>
+    <div class="w-75 rounded bg-info mx-auto p-3 my-5">
+      <h1 class="text-center">Crud-System</h1>
+      <div>
+        <label for="productNameInput">Product Name:</label>
+        <input
+          type="text"
+          id="productNameInput"
+          class="form-control p-2"
+          oninput="vailditionName()"
+        />
+        <p id="NameInput" class="alert alert-danger d-none">
+          invaild Name [input must start with caital char ]
+        </p>
+      </div>
+      <div>
+        <label for="productPriceInput">Product Price:</label>
+        <input
+          type="number"
+          id="productPriceInput"
+          class="form-control p-2"
+          oninput="vailditionPrice()"
+        />
+        <p id="PriceInput" class="alert alert-danger d-none">
+          invaild Price [price do notb start with 0]
+        </p>
+      </div>
+      <div>
+        <label for="productCatergryInput">Product categry:</label>
+        <input
+          type="text"
+          id="productCatergryInput"
+          class="form-control p-2"
+          oninput="vailditioncategry()"
+        />
+        <p id="categryInput" class="alert alert-danger d-none">
+          invaild categry
+        </p>
+      </div>
+      <div>
+        <label for="productDescriptionInput">Product Description:</label>
+        <textarea
+          id="productDescriptionInput"
+          class="form-control p-2"
+          oninput="vailditiondesc()"
+        ></textarea>
+        <p id="descInput" class="alert alert-danger d-none">invaild desc</p>
+      </div>
+      <button
+        onclick="addProduct()"
+        class="btn btn-primary w-100 mt-3"
+        id="addproduct"
+      >
+        add product
+      </button>
+      <button
+        onclick="updatfun()"
+        class="btn btn-primary w-100 mt-3 d-none"
+        id="updateproduct"
+      >
+        update product
+      </button>
+      <input
+        class="form-control my-2"
+        id="serechItems"
+        placeholder="search here..."
+        typy="text"
+        oninput="serechProduct()"
+      />
+      <table class="table my-3 text-center">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Categry</th>
+            <th>Description</th>
+            <th>Update</th>
+            <th>delet</th>
+          </tr>
+        </thead>
+        <tbody id="tablebody"></tbody>
+      </table>
     </div>
-    
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
